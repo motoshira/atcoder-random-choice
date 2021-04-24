@@ -1,4 +1,6 @@
 (ns arcc-web.core)
 
-(defn ^:export　init []
-      (js/alert "Hello, world!"))
+
+(defn ^:export init
+  []
+  (js/alert "Hello, world!"))
