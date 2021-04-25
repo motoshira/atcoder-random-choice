@@ -1,6 +1,11 @@
-(ns arcc-web.core)
+(ns arcc-web.core
+  (:require
+    [arcc-web.view :as ac.view]
+    [reagent.dom :as rdom]))
 
 
 (defn ^:export init
   []
-  (js/alert "Hello, world!"))
+  (rdom/render
+    [ac.view/main-component]
+    (.-body js/document)))
