@@ -1,6 +1,6 @@
 (ns arcc-web.core
   (:require
-    [arcc-web.view :as ac.view]
+    [arcc-web.view.core :as ac.view]
     [reagent.dom :as rdom]))
 
 
