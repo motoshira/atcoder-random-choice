@@ -7,10 +7,6 @@
     [reagent.core :as r]))
 
 
-;; 全体のテーマ
-
-
-
 ;; ナビゲーション
 
 (def ^:private navbar-styles
@@ -57,11 +53,9 @@
                      :on-change #()
                      :name "checkbox1"}]]]]])
 
-
 (defn ResultForm
   []
   [:div "TODO"])
-
 
 ;; MainComponentのレイアウト
 
@@ -71,7 +65,6 @@
                      :display :flex
                      :height "100vh"
                      :width "100vw"}})))
-
 
 (defn MainComponent
   []
