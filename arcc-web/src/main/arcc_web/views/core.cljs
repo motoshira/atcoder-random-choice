@@ -1,9 +1,9 @@
-(ns arcc-web.view.core
+(ns arcc-web.views.core
   (:require
     ["@material-ui/styles" :refer [makeStyles createMuiTheme]]
     [applied-science.js-interop :as j]
     [reagent-material-ui.components :as mui]
-    [arcc-web.view.components :as v.c]
+    [arcc-web.views.components :as v.c]
     [reagent.core :as r]))
 
 

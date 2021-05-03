@@ -1,4 +1,4 @@
-(ns arcc-web.view.components
+(ns arcc-web.views.components
   (:require
    ["@material-ui/styles" :refer [makeStyles createMuiTheme]]
    [reagent.core :as r]
