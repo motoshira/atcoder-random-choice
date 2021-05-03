@@ -3,6 +3,7 @@
     ["@material-ui/styles" :refer [makeStyles createMuiTheme]]
     [applied-science.js-interop :as j]
     [reagent-material-ui.components :as mui]
+    [arcc-web.view.components :as v.c]
     [reagent.core :as r]))
 
 
@@ -29,7 +30,6 @@
      {:color    "primary"
       :position "relative"
       :class-name (j/get styles :root)}
-
      [mui/toolbar
       [mui/typography {:class-name (j/get styles :title)
                        :variant    "h6"}
@@ -37,7 +37,12 @@
       [mui/button {:class-name (j/get styles :button)}
        "使い方"]
       [mui/button {:class-name (j/get styles :button)}
-       ""]]]))
+       "GitHub"]]]))
+
+(comment
+  (def ^:private submit-form-styles
+    (makeStyles
+     (clj->js {}))))
 
 
 (defn SubmitForm
@@ -48,10 +53,9 @@
     [:div
      [:form {:on-submit (fn [e]
                           (.preventDefault e))}
-      [mui/form-control {:full-width true}
-       [mui/input-label
-        "コンテスト種別"]
-       [mui/input {:type :text-input}]]]]]])
+      [v.c/checkbox {:label "Click me!"
+                     :on-change #()
+                     :name "checkbox1"}]]]]])
 
 
 (defn ResultForm
@@ -59,7 +63,7 @@
   [:div "TODO"])
 
 
-;; レイアウト
+;; MainComponentのレイアウト
 
 (def ^:private styles
   (makeStyles
@@ -77,5 +81,3 @@
      [SubmitForm]
      (when (true? show-result?)
        [ResultForm])]))
-
-
